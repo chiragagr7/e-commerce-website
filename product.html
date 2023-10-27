@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section style="width: 50%;float: left;">
+        <img id="main" src="headphone.jpg" alt="product" width="80%" style="margin-top: 50px;margin-left: 100px;">
+    </section>
+    <section style="width: 40%;float: right;margin-left: 100px;">
+        <p style="color: blue;font-size: 20px;">headphones</p>
+        <p style="font-weight: lighter;font-size: 60px;margin-top: 30px;">Beats EP</p>
+        <p style="font-weight: lighter;color: gray;font-size: 18px;">
+            The preffered choice for those who Love to listen to music and gaming.with high base and surround sound.
+            This affordable headphones provide quality more than price.Buy now!!
+        </p>
+
+        <hr>
+        <p style="color: gray;font-size: 18px;">Quantity</p>
+        <button onclick="hello()" style="float: left;margin-right: 20px;">+</button>
+        <p id="f1" style="font-size: 20px;margin-top: 0px;float: left;">1</p>
+        <button onclick="hello2()"
+            style="padding-left: 5px;padding-top: 2px;padding-right: 10px;padding-bottom: 1px;margin-left: 20px;">-</button>
+        <script>
+            let x = 1;
+            function hello() {
+                x += 1;
+                document.getElementById('f1').innerHTML = x;
+            }
+
+            function hello2() {
+                x -= 1
+                document.getElementById('f1').innerHTML = x;
+            }
+        </script>
+
+        <p style="color: gray;font-size: 18px;margin-top: 40px;">Cable configuration</p>
+        <input type="radio" onclick="chan()" name="confi" id="bluetooth" value="bluetooth">Bluetooth<br>
+        <input type="radio"  onclick="change()" name="confi" id="wired" value="wired" style="margin-bottom: 20px;">Wired
+        <hr>
+        <p style="font-weight: lighter;font-size:40px;margin-top: 0px;float: left;">249$</p>
+        <button onclick="run()" type="button"
+            style="background-color: greenyellow;border: 1px solid black;padding: 10px;font-size: 18px;margin-left: 20px;border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;margin-top: 5px;">Add
+            to cart</button>
+            <script>
+                function run(){
+                    window.alert("Sucessfully added to cart")
+                }
+            </script>
+            <script>
+
+                function change(){
+                    var image=document.getElementById('main');
+                    if(image.src.match('headphone.jpg')){
+                        image.src='alt headphone.jpg';
+                    }
+
+                    else {
+                        image.src='headphone.jpg';
+                    }
+                }
+
+                function chan(){
+                    var image=document.getElementById('main');
+                    if(image.src.match('alt headphone.jpg')){
+                        image.src='headphone.jpg';
+                    }
+
+                    else {
+                        image.src='alt headphone.jpg';
+                    }
+                }
+            </script>
+
+            
+    </section>
+</body>
+
+</html>
